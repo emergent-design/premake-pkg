@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+
+clean:
+	dh_clean
+
+build:
+	@# Do nothing
+
+binary:
+	dh_prep
+	mkdir -p debian/premake/usr/bin
+	cp ../premake5 debian/premake/usr/bin/
+	dh_installdocs
+	dh_installchangelogs
+	dh_compress
+	dh_fixperms
+	dh_strip
+	dh_makeshlibs
+	dh_shlibdeps
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb

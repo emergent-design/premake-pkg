@@ -1,0 +1,14 @@
+Source: premake
+Section: devel
+Priority: optional
+Build-Depends: build-essential, debhelper (>= 9)
+Maintainer: Dan Parnham <dan@emergent-design.co.uk>
+Homepage: https://premake.github.io/
+
+Package: premake
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Powerfully simple build configuration
+ Premake is a command line utility which reads a scripted definition of
+ a software project and, most commonly, uses it to generate project files
+ for toolsets like Visual Studio, Xcode, or GNU Make.

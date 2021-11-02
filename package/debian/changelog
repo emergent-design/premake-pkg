@@ -1,0 +1,5 @@
+premake (5.0.0-alpha16-0ubuntu1) unstable; urgency=low
+
+  * Initial packaging
+
+ -- Dan Parnham <dan@emergent-design.co.uk>  Fri, 29 Oct 2021 16:55:35 +0100

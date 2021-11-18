@@ -16,8 +16,8 @@ package:
 	FROM +build
 	COPY --dir package .
 	RUN cd package && dpkg-buildpackage -b -uc -us
-	SAVE ARTIFACT *.deb AS LOCAL ./
+	SAVE ARTIFACT *.deb AS LOCAL build/
+	# SAVE ARTIFACT *.deb
 
 all:
-	BUILD --platform=linux/amd64 +build
-	BUILD --platform=linux/arm64 +build
+	BUILD --platform=linux/amd64 --platform=linux/arm64 +package
